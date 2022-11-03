@@ -43,7 +43,7 @@ You want to give it a try? - Follow the instructions below :
 
 ### **Compiling from source**
 ---
-Go to our [**Gitlab**](https://gitlabstudents.isartintra.com/projets/2021_gp_2025_engine_gp_2025_engine-hydrill) (**TODO : Change with Github for free access. Gitlab need a student registration**) and clone the project on your Desktop. Once you are in the repository, simply run the **DevLaunch.bat** file to clean the old binaries and launch the **HydrillProject** and **HydrillScripting** visual studio solutions.
+Go to our [**Gitlab**](https://gitlabstudents.isartintra.com/projets/2021_gp_2025_engine_gp_2025_engine-hydrill) (**TODO : Change with Github for free access. Gitlab need a student registration**) and clone the project on your Desktop. Once you are in the repository, extract the **Dependencies.zip** compressed file and run the **DevLaunch.bat** file to clean the old binaries and launch the **HydrillProject** and **HydrillScripting** visual studio solutions.
 
 If you are using ***Visual Studio 2022***, be sure to run with the ***MSVC v142 build tools*** and with the ***ATL for v142 build tools*** installed. *(check images below)*
 
