@@ -1,0 +1,56 @@
+{
+ "804e7920-cc55-45c1-a6c6-16392178c2c8": {
+  "Components": {
+   "36b50335-c40a-4da8-8ad0-7a669b3bc04b": {
+    "m_center": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "m_halfDimensions": [
+     0.5,
+     0.5,
+     0.5
+    ],
+    "m_isTrigger": false,
+    "m_material": {
+     "dynamicFriction": 0.019999999552965164,
+     "restitution": 0.019999999552965164,
+     "staticFriction": 0.019999999552965164
+    },
+    "m_name": "BoxCollider"
+   },
+   "e4219ae9-773d-43b0-9c80-0f3d2eb88415": {
+    "m_mesh": "79848de7-018a-48fd-b011-93a2d176cde5",
+    "m_name": "MeshComponent",
+    "materials": {
+     "v0": "b3838dcf-32e9-44f5-a3b9-68fa5e7abca0"
+    }
+   }
+  },
+  "Internal": {
+   "m_isActive": true,
+   "m_name": "Cube",
+   "m_parent": "0",
+   "transform": {
+    "isStatic": false,
+    "position": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   }
+  }
+ }
+}

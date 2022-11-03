@@ -1,0 +1,52 @@
+{
+ "eaa58dda-62d5-434b-a546-b521f3ded41f": {
+  "Components": {
+   "7fe63f75-60be-428b-88e8-42e2c8686b65": {
+    "m_center": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "m_isTrigger": false,
+    "m_material": {
+     "dynamicFriction": 0.019999999552965164,
+     "restitution": 0.019999999552965164,
+     "staticFriction": 0.019999999552965164
+    },
+    "m_name": "SphereCollider",
+    "m_radius": 0.5
+   },
+   "b3807913-eac2-4946-8f66-ddda46433d18": {
+    "m_mesh": "3d9602b5-ef72-4ac9-a83a-c86ea3ea8608",
+    "m_name": "MeshComponent",
+    "materials": {
+     "v0": "b3838dcf-32e9-44f5-a3b9-68fa5e7abca0"
+    }
+   }
+  },
+  "Internal": {
+   "m_isActive": true,
+   "m_name": "Sphere",
+   "m_parent": "0",
+   "transform": {
+    "isStatic": false,
+    "position": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   }
+  }
+ }
+}

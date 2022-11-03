@@ -1,0 +1,57 @@
+{
+ "e349ff5f-2fcf-49d3-a4f9-7cf5801b1f6b": {
+  "Components": {
+   "43c4c562-fe61-419e-b8cc-bbb8a092d746": {
+    "m_attenuationDistance": [
+     1.0,
+     3.4028234663852886e+38
+    ],
+    "m_attenuationModel": 1,
+    "m_coneInOutAngles": [
+     360.000244140625,
+     360.000244140625
+    ],
+    "m_coneOuterGain": 0.0,
+    "m_directionalAttenuation": 1.0,
+    "m_dopplerFactor": 1.0,
+    "m_gain": [
+     0.0,
+     0.0
+    ],
+    "m_loop": false,
+    "m_name": "SoundEmitter",
+    "m_pan": 0.0,
+    "m_pitch": 1.0,
+    "m_playOnStart": true,
+    "m_rolloff": 1.0,
+    "m_sound": "0",
+    "m_spatialized": false,
+    "m_volume": 1.0
+   }
+  },
+  "Internal": {
+   "m_isActive": true,
+   "m_name": "SoundEmitter",
+   "m_parent": "0",
+   "transform": {
+    "isStatic": false,
+    "position": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   }
+  }
+ }
+}

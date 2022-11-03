@@ -1,0 +1,215 @@
+{
+ "boudingBoxMax": [
+  50.0,
+  50.00000762939453,
+  100.0
+ ],
+ "boudingBoxMin": [
+  -50.0,
+  -50.00000762939453,
+  -100.0
+ ],
+ "extension": ".fbx",
+ "materials": [
+  "46211408-75cc-40ec-ba02-b9f8a96b5253"
+ ],
+ "meshes": [
+  "eb1f2d27-9faf-41fa-9fcf-007412e6c80c",
+  "a0675160-9b44-4877-a93f-6e2c0e5be3d2",
+  "ea9527fe-3138-48d3-87a7-5e30e836d8ff"
+ ],
+ "offsets": [
+  {
+   "position": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation": [
+    -0.7071068286895752,
+    0.0,
+    0.0,
+    0.7071067094802856
+   ],
+   "scale": [
+    100.0,
+    100.0,
+    100.0
+   ]
+  },
+  {
+   "position": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation": [
+    -0.7071068286895752,
+    0.0,
+    0.0,
+    0.7071067094802856
+   ],
+   "scale": [
+    100.0,
+    100.0,
+    100.0
+   ]
+  },
+  {
+   "position": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "rotation": [
+    -0.7071068286895752,
+    0.0,
+    0.0,
+    0.7071067094802856
+   ],
+   "scale": [
+    100.0,
+    100.0,
+    100.0
+   ]
+  }
+ ],
+ "prefab": {
+  "0655aedb-7e12-4dc3-b828-9990c8c6f3d0": {
+   "Components": {
+    "4508d817-22f4-465e-a139-1d62002c2114": {
+     "m_mesh": "a0675160-9b44-4877-a93f-6e2c0e5be3d2",
+     "m_name": "MeshComponent",
+     "materials": {
+      "v0": "46211408-75cc-40ec-ba02-b9f8a96b5253"
+     }
+    }
+   },
+   "Internal": {
+    "m_name": "CapsuleInternal",
+    "m_parent": "b81a06a2-68ca-4593-816c-709101c3ecb2",
+    "transform": {
+     "isStatic": [
+      false
+     ],
+     "position": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      -0.7071068286895752,
+      0.0,
+      0.0,
+      0.7071067094802856
+     ],
+     "scale": [
+      100.0,
+      100.0,
+      100.0
+     ]
+    }
+   }
+  },
+  "55a86180-83fc-45af-b5e5-176ed99713d9": {
+   "Components": {
+    "77eb9f0d-58c7-47f8-9336-98da4337f429": {
+     "m_mesh": "ea9527fe-3138-48d3-87a7-5e30e836d8ff",
+     "m_name": "MeshComponent",
+     "materials": {
+      "v0": "46211408-75cc-40ec-ba02-b9f8a96b5253"
+     }
+    }
+   },
+   "Internal": {
+    "m_name": "SphereInternal",
+    "m_parent": "b81a06a2-68ca-4593-816c-709101c3ecb2",
+    "transform": {
+     "isStatic": [
+      false
+     ],
+     "position": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      -0.7071068286895752,
+      0.0,
+      0.0,
+      0.7071067094802856
+     ],
+     "scale": [
+      100.0,
+      100.0,
+      100.0
+     ]
+    }
+   }
+  },
+  "abd3c698-0f8f-4302-bfaf-8bce5c16eb9d": {
+   "Components": {
+    "80fa3735-6cd5-48c1-a030-9f53d1b15a92": {
+     "m_mesh": "eb1f2d27-9faf-41fa-9fcf-007412e6c80c",
+     "m_name": "MeshComponent",
+     "materials": {
+      "v0": "46211408-75cc-40ec-ba02-b9f8a96b5253"
+     }
+    }
+   },
+   "Internal": {
+    "m_name": "CubeInternal",
+    "m_parent": "b81a06a2-68ca-4593-816c-709101c3ecb2",
+    "transform": {
+     "isStatic": [
+      false
+     ],
+     "position": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      -0.7071068286895752,
+      0.0,
+      0.0,
+      0.7071067094802856
+     ],
+     "scale": [
+      100.0,
+      100.0,
+      100.0
+     ]
+    }
+   }
+  },
+  "b81a06a2-68ca-4593-816c-709101c3ecb2": {
+   "Components": null,
+   "Internal": {
+    "m_name": "Primitives",
+    "m_parent": "0",
+    "transform": {
+     "isStatic": [
+      false
+     ],
+     "position": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ]
+    }
+   }
+  }
+ }
+}

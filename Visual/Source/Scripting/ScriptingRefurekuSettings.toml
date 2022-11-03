@@ -1,0 +1,73 @@
+[CodeGenManagerSettings]
+# List of supported extensions
+supportedFileExtensions = [".h", ".hpp"]
+
+# Files contained in the directories of this list will be parsed
+toProcessDirectories = ['''..\..\..\Source\Scripting\include''']
+
+# Files to parse which are not included in any directory of toParseDirectories
+toProcessFiles = []
+
+# Files contained in the directories of this list will be ignored
+ignoredDirectories = [
+'''..\..\..\Source\Scripting\include\Hydrill''',
+'''..\..\..\Source\Scripting\include\Generated''']
+
+# Files not to parse which are not included in any directory of ignoredDirectories
+ignoredFiles = []
+
+[CodeGenUnitSettings]
+# Generated files will be located here
+outputDirectory = '''..\..\..\Source\Scripting\include\Generated'''
+
+generatedHeaderFileNamePattern = "##FILENAME##.rfkh.h"
+generatedSourceFileNamePattern = "##FILENAME##.rfks.h"
+classFooterMacroPattern = "##CLASSFULLNAME##_GENERATED"
+headerFileFooterMacroPattern = "File_##FILENAME##_GENERATED"
+
+exportSymbolMacroName = "SCRIPTING_API"
+
+[ParsingSettings]
+# Used c++ version (supported values are: 17, 20)
+cppVersion = 20
+
+# Include directories of the project
+projectIncludeDirectories = [
+'''..\..\..\Source\Scripting\include''',
+'''..\..\..\Source\Engine\include''',
+'''..\..\..\Dependencies\include''',
+'''..\..\..\Dependencies\include\physx''']
+
+# Must be one of "msvc", "clang++", "g++"
+compilerExeName = "msvc"
+
+# Abort parsing on first encountered error
+shouldAbortParsingOnFirstError = true
+
+# Should all entities be parsed whether they are annotated or not
+shouldParseAllNamespaces = false
+shouldParseAllClasses = false
+shouldParseAllStructs = false
+shouldParseAllVariables = false
+shouldParseAllFields = false
+shouldParseAllFunctions = false
+shouldParseAllMethods = false
+shouldParseAllEnums = false
+shouldParseAllEnumValues = true
+
+shouldLogDiagnostic = false
+
+propertySeparator = ","
+subPropertySeparator = ","
+subPropertyStartEncloser = "("
+subPropertyEndEncloser = ")"
+
+namespaceMacroName = "HY_NAMESPACE"
+classMacroName = "HY_CLASS"
+structMacroName = "HY_STRUCT"
+variableMacroName = "HY_VARIABLE"
+fieldMacroName = "HY_FIELD"
+functionMacroName = "HY_FUNCTION"
+methodMacroName = "HY_METHOD"
+enumMacroName = "HY_ENUM"
+enumValueMacroName = "HY_ENUMVALUE"

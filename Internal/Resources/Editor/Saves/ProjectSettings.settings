@@ -1,0 +1,39 @@
+{
+ "Camera": {
+  "Data": [
+   75.0,
+   5.620464324951172
+  ],
+  "Frustum": [
+   60.0,
+   0.10000000149011612,
+   500.0
+  ],
+  "Position": [
+   8.11194133758545,
+   13.251346588134766,
+   173.86647033691406
+  ],
+  "Rotation": [
+   -7.012989521026611,
+   1660.1929931640625,
+   0.0
+  ]
+ },
+ "Graphics": {
+  "autoExposure": true,
+  "bloomEnabled": true,
+  "bloomThreshold": 3.0,
+  "constantExposure": 1.0,
+  "exposureMultiplier": 1.0,
+  "exposureSpeed": 1.0,
+  "maxExposure": 1.0,
+  "minExposure": 1.0,
+  "shadows": true
+ },
+ "Keys": {
+  "Axes": null,
+  "Buttons": null
+ },
+ "Scene": "25307ae5-78f8-40b8-a384-499ddb770c5f"
+}

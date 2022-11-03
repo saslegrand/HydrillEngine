@@ -1,0 +1,97 @@
+[CodeGenManagerSettings]
+# List of supported extensions
+supportedFileExtensions = [".h", ".hpp"]
+
+# Files contained in the directories of this list will be parsed
+toProcessDirectories = [
+'''..\..\..\Source\Engine\include\ECS''',
+'''..\..\..\Source\Engine\include\ECS\Sound''',
+'''..\..\..\Source\Engine\include\ECS\UI''',
+'''..\..\..\Source\Engine\include\Maths''',
+'''..\..\..\Source\Engine\include\Renderer\RenderObjects''',
+'''..\..\..\Source\Engine\include\Resources\Resource''']
+
+# Files to parse which are not included in any directory of toParseDirectories
+toProcessFiles = [
+'''..\..\..\Source\Engine\include\IO\Inputs.hpp''',
+'''..\..\..\Source\Engine\include\Tools\ReflectedSTD.hpp''',
+'''..\..\..\Source\Engine\include\Tools\RFKProperties.hpp''',
+'''..\..\..\Source\Engine\include\Tools\Flags.hpp''',
+'''..\..\..\Source\Engine\include\Tools\Curves.hpp''',
+'''..\..\..\Source\Engine\include\Tools\SoundEnums.hpp''',
+'''..\..\..\Source\Engine\include\Types\Color.hpp''',
+'''..\..\..\Source\Engine\include\Physics\PhysicsEnums.hpp''',
+'''..\..\..\Source\Engine\include\Physics\PhysicsMaterial.hpp''',
+'''..\..\..\Source\Engine\include\Physics\BoolVector3.hpp''',
+'''..\..\..\Source\Engine\include\Renderer\MaterialSurface.hpp''',
+'''..\..\..\Source\Engine\include\Renderer\ShaderType.hpp''',
+'''..\..\..\Source\Engine\include\Particles\ParticleEmitter.hpp''',
+'''..\..\..\Source\Engine\include\Particles\ParticleParameters.hpp''',  
+'''..\..\..\Source\Engine\include\Core\BaseObject.hpp''',
+'''..\..\..\Source\Engine\include\Resources\Parsers\ParserFlags.hpp''']
+
+# Files contained in the directories of this list will be ignored
+ignoredDirectories = [
+'''..\..\..\Source\Engine\include\ECS\Systems''']
+
+# Files not to parse which are not included in any directory of ignoredDirectories
+ignoredFiles = [
+'''..\..\..\Source\Engine\include\Maths\Maths.hpp''', 
+'''..\..\..\Source\Engine\include\Maths\MathsDef.hpp''']
+
+
+[CodeGenUnitSettings]
+# Generated files will be located here
+outputDirectory = '''..\..\..\Source\Engine\include\Generated'''
+
+generatedHeaderFileNamePattern = "##FILENAME##.rfkh.h"
+generatedSourceFileNamePattern = "##FILENAME##.rfks.h"
+classFooterMacroPattern = "##CLASSFULLNAME##_GENERATED"
+headerFileFooterMacroPattern = "File_##FILENAME##_GENERATED"
+
+exportSymbolMacroName = "ENGINE_API"
+
+[ParsingSettings]
+# Used c++ version (supported values are: 17, 20)
+cppVersion = 20
+
+# Include directories of the project
+projectIncludeDirectories = [
+'''..\..\..\Source\Engine\include''',
+'''..\..\..\Source\Common\include''',
+'''..\..\..\Dependencies\include''',
+'''..\..\..\Dependencies\include\physx''']
+
+# Must be one of "msvc", "clang++", "g++"
+compilerExeName = "msvc"
+
+# Abort parsing on first encountered error
+shouldAbortParsingOnFirstError = true
+
+# Should all entities be parsed whether they are annotated or not
+shouldParseAllNamespaces = false
+shouldParseAllClasses = false
+shouldParseAllStructs = false
+shouldParseAllVariables = false
+shouldParseAllFields = false
+shouldParseAllFunctions = false
+shouldParseAllMethods = false
+shouldParseAllEnums = false
+shouldParseAllEnumValues = true
+
+shouldLogDiagnostic = false
+
+propertySeparator = ","
+subPropertySeparator = ","
+subPropertyStartEncloser = "("
+subPropertyEndEncloser = ")"
+
+namespaceMacroName = "HY_NAMESPACE"
+classMacroName = "HY_CLASS"
+structMacroName = "HY_STRUCT"
+variableMacroName = "HY_VARIABLE"
+fieldMacroName = "HY_FIELD"
+functionMacroName = "HY_FUNCTION"
+methodMacroName = "HY_METHOD"
+enumMacroName = "HY_ENUM"
+enumValueMacroName = "HY_ENUMVALUE"

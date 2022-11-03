@@ -1,0 +1,55 @@
+{
+ "64dd9ed9-5183-46ce-8760-840151069823": {
+  "Components": {
+   "6a6dbefb-c93b-4f7f-b260-3633b70005f7": {
+    "ambient": [
+     0.10000000149011612,
+     0.10000000149011612,
+     0.10000000149011612
+    ],
+    "castShadows": true,
+    "diffuse": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "enabled": true,
+    "innerCutoff": 0.9100000262260437,
+    "intensity": 1.0,
+    "m_name": "LightComponent",
+    "outerCutoff": 0.8199999928474426,
+    "radius": 5.0,
+    "specular": [
+     1.0,
+     1.0,
+     1.0
+    ],
+    "type": 1
+   }
+  },
+  "Internal": {
+   "m_isActive": true,
+   "m_name": "Light",
+   "m_parent": "0",
+   "transform": {
+    "isStatic": false,
+    "position": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   }
+  }
+ }
+}

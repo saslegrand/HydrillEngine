@@ -1,0 +1,10 @@
+/Visual/x64
+/Visual/Source/Editor/Logs/*.log
+/Binaries/
+
+/Source/Engine/include/Generated
+/Source/Scripting/include/Generated
+
+*.user
+*.vs
+*.vscode

@@ -1,0 +1,37 @@
+{
+ "e6d7c19d-e47b-4abb-b40e-a23838787b37": {
+  "Components": {
+   "b3b397c4-2eca-4d75-a435-e36f5c6fe5c4": {
+    "duration": 1.0,
+    "emitters": null,
+    "gapDuration": 1.0,
+    "loop": true,
+    "m_name": "ParticleComponent"
+   }
+  },
+  "Internal": {
+   "m_isActive": true,
+   "m_name": "ParticleSystem",
+   "m_parent": "0",
+   "transform": {
+    "isStatic": false,
+    "position": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "rotation": [
+     0.0,
+     0.0,
+     0.0,
+     1.0
+    ],
+    "scale": [
+     1.0,
+     1.0,
+     1.0
+    ]
+   }
+  }
+ }
+}

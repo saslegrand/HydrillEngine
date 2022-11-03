@@ -1,0 +1,43 @@
+{
+ "ambientColor": [
+  0.019607843831181526,
+  0.019607843831181526,
+  0.019607843831181526
+ ],
+ "ambientTexture": "c017ba33-33eb-44bd-a807-a11f1ecfc015",
+ "aoFactor": 1.0,
+ "aoTexture": "c017ba33-33eb-44bd-a807-a11f1ecfc015",
+ "diffuseColor": [
+  0.800000011920929,
+  0.800000011920929,
+  0.800000011920929,
+  1.0
+ ],
+ "diffuseTexture": "c017ba33-33eb-44bd-a807-a11f1ecfc015",
+ "emissiveColor": [
+  0.0,
+  0.0,
+  0.0
+ ],
+ "emissiveStrength": 1.0,
+ "emissiveTexture": "0",
+ "maskTexture": "c017ba33-33eb-44bd-a807-a11f1ecfc015",
+ "metallicTexture": "c017ba33-33eb-44bd-a807-a11f1ecfc015",
+ "metalness": 0.5,
+ "normalFactor": 1.0,
+ "normalTexture": "0",
+ "roughness": 1.0,
+ "roughnessTexture": "c017ba33-33eb-44bd-a807-a11f1ecfc015",
+ "shader": 2,
+ "specularColor": [
+  0.800000011920929,
+  0.800000011920929,
+  0.800000011920929
+ ],
+ "specularTexture": "c017ba33-33eb-44bd-a807-a11f1ecfc015",
+ "surface": 0,
+ "tiling": [
+  1.0,
+  1.0
+ ]
+}

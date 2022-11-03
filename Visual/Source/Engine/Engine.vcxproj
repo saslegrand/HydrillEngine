@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Standalone|x64">
+      <Configuration>Standalone</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b8cf6cc4-94d6-4347-8388-c6579f7ec88c}</ProjectGuid>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Standalone|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Standalone|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)..\Source\Engine\include;</IncludePath>
+    <SourcePath>$(VC_SourcePath);$(SolutionDir)..\Source\Engine\src</SourcePath>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <LibraryPath>$(LibraryPath);</LibraryPath>
+    <OutDir>$(SolutionDir)..\Binaries\$(Configuration)\</OutDir>
+    <CustomBuildBeforeTargets>BuildGenerateSources</CustomBuildBeforeTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)..\Source\Engine\include;</IncludePath>
+    <SourcePath>$(VC_SourcePath);$(SolutionDir)..\Source\Engine\src</SourcePath>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <LibraryPath>$(LibraryPath);</LibraryPath>
+    <OutDir>$(SolutionDir)..\Binaries\$(Configuration)\</OutDir>
+    <CustomBuildBeforeTargets>BuildGenerateSources</CustomBuildBeforeTargets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Standalone|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);$(SolutionDir)..\Source\Engine\include;</IncludePath>
+    <SourcePath>$(VC_SourcePath);$(SolutionDir)..\Source\Engine\src</SourcePath>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <LibraryPath>$(LibraryPath);</LibraryPath>
+    <OutDir>$(SolutionDir)..\Binaries\$(Configuration)\</OutDir>
+    <CustomBuildBeforeTargets>BuildGenerateSources</CustomBuildBeforeTargets>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>ENGINE_EXPORTS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Dependencies\include\physx;$(SolutionDir)..\Dependencies\include;$(SolutionDir)..\Source\Common\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>PhysX_static.lib;PhysXCharacterKinematic_static.lib;PhysXCommon_static.lib;PhysXCooking_static.lib;PhysXExtensions_static.lib;PhysXFoundation_static.lib;PhysXPvdSDK_static.lib;PhysXVehicle_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)..\Dependencies\libs\physx\debug</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>$(SolutionDir)..\Dependencies\bin\RefurekuGenerator $(SolutionDir)Source\Engine\EngineRefurekuSettings.toml</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Run EngineRefurekuRefureku.exe to generate reflected files before compilation</Message>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>xcopy /D "$(SolutionDir)..\Dependencies\libs\physx\debug" "$(OutDir)"</Command>
+      <Outputs>$(OutDir)\</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>ENGINE_EXPORTS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Dependencies\include\physx;$(SolutionDir)..\Dependencies\include;$(SolutionDir)..\Source\Common\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>PhysX_static.lib;PhysXCharacterKinematic_static.lib;PhysXCommon_static.lib;PhysXCooking_static.lib;PhysXExtensions_static.lib;PhysXFoundation_static.lib;PhysXPvdSDK_static.lib;PhysXVehicle_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)..\Dependencies\libs\physx\release</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>$(SolutionDir)..\Dependencies\bin\RefurekuGenerator $(SolutionDir)Source\Engine\EngineRefurekuSettings.toml</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Run EngineRefurekuRefureku.exe to generate reflected files before compilation</Message>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>xcopy /D "$(SolutionDir)..\Dependencies\libs\physx\release" "$(OutDir)"</Command>
+      <Outputs>$(OutDir)\</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Standalone|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>PUBLISHED;ENGINE_EXPORTS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Dependencies\include\physx;$(SolutionDir)..\Dependencies\include;$(SolutionDir)..\Source\Common\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>PhysX_static.lib;PhysXCharacterKinematic_static.lib;PhysXCommon_static.lib;PhysXCooking_static.lib;PhysXExtensions_static.lib;PhysXFoundation_static.lib;PhysXPvdSDK_static.lib;PhysXVehicle_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(SolutionDir)..\Dependencies\libs\physx\release</AdditionalLibraryDirectories>
+    </Link>
+    <PreBuildEvent>
+      <Command>$(SolutionDir)..\Dependencies\bin\RefurekuGenerator $(SolutionDir)Source\Engine\EngineRefurekuSettings.toml</Command>
+    </PreBuildEvent>
+    <PreBuildEvent>
+      <Message>Run EngineRefurekuRefureku.exe to generate reflected files before compilation</Message>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>xcopy /D "$(SolutionDir)..\Dependencies\libs\physx\release" "$(OutDir)"</Command>
+      <Outputs>$(OutDir)\</Outputs>
+    </CustomBuildStep>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Source\Engine\include\Core\BaseObject.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Core\Logger.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Core\ResourcesTaskPool.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Core\TaskQueue.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Core\Time.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Behavior.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\CameraComponent.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Component.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\GameObject.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\LightComponent.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\MeshComponent.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\ParticleComponent.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Physics\BoxCollider.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Physics\CapsuleCollider.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Physics\Collider.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Physics\Rigidbody.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Physics\SphereCollider.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Physics\TerrainCollider.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\SceneObject.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\SkeletalMeshComponent.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Sound\SoundEmitter.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Sound\SoundListener.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Systems\BehaviorSystem.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Systems\CameraSystem.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Systems\ParticleSystem.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Systems\MeshSystem.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Systems\SoundSystem.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Systems\SystemManager.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\Transform.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\TransformData.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\UI\CanvasComponent.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\ECS\UI\UIButtonComponent.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Engine.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\EngineContext.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\EngineDLL.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\GameContext.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\IO\Button.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\IO\InputAxis.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\IO\Inputs.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\IO\InputSystem.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\IO\Keyboard.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\IO\Mouse.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Maths\Maths.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Maths\MathsDef.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Maths\Matrix3.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Maths\Matrix4.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Maths\Quaternion.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Maths\Vector2.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Maths\Vector3.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Maths\Vector4.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Particles\ParticleEmitter.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Particles\ParticleInstance.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Particles\ParticleParameters.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Physics\PhysicsActor.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Physics\PhysicsEnums.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Physics\PhysicsMaterial.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Physics\PhysicsSimulation.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Physics\PhysicsSystem.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Physics\BoolVector3.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\DebugRenderPipeline.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\GPULightData.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\GPUMeshData.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\GPUSkeletalData.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\GPUTextureData.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\GraphicsSettings.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\MeshInstance.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\MeshLitShader.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\MeshPBRShader.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\MeshRenderPipeline.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\MeshShader.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\MaterialSurface.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\MeshUnlitShader.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\OpaqueRenderPipeline.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\PostProcess.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\ParticleRenderPipeline.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\Primitives\FrameBuffer.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\Primitives\GLCubeMap.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\Primitives\GLPrimitive.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\Primitives\GLTexture.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\Primitives\GLTextureArray.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\Primitives\RenderBuffer.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\Primitives\ShaderProgram.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\Primitives\VertexArray.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\Primitives\VertexBuffer.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\RenderConfig.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\RenderGPUWrapper.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\RenderObjects\Camera.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\RenderObjects\Light.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\RenderpassParameters.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\RenderPipeline.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\RenderSystem.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\RenderUtils.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\ShaderType.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\ShadowProcess.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\SkyboxRenderPipeline.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Renderer\TransparentRenderPipeline.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Animation\Bone.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Loaders\ResourcesLoader.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Parsers\AssimpParser.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Parsers\ParserFlags.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\ResourcesManager.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\ResourceType.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Resource\Material.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Resource\Mesh.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Resource\Model.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Resource\Prefab.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Resource\Resource.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Resource\Scene.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Resource\Script.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Resource\Shader.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Resource\SkeletalMesh.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Resource\Skybox.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Resource\Sound.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Resource\Terrain.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Resource\Texture.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\SceneManager.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Resources\Types.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Tools\Curves.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Tools\DrawDebug.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Tools\Event.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Tools\Flags.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Tools\PathConfig.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Tools\ReflectedSTD.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Tools\RFKProperties.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Tools\RFKUtils.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Tools\SerializationUtils.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Tools\SoundEnums.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Tools\StringHelper.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Types\Color.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Types\GUID.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Types\Serializable.hpp" />
+    <ClInclude Include="..\..\..\Source\Engine\include\Types\SoundInterface.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Source\Engine\src\Core\BaseObject.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Core\Logger.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Core\ResourcesTaskPool.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Core\Time.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Behavior.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\CameraComponent.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Component.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\GameObject.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\LightComponent.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\MeshComponent.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\ParticleComponent.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Physics\BoxCollider.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Physics\CapsuleCollider.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Physics\Collider.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Physics\Rigidbody.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Physics\SphereCollider.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Physics\TerrainCollider.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\SceneObject.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\SkeletalMeshComponent.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Sound\SoundEmitter.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Sound\SoundListener.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Systems\BehaviorSystem.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Systems\CameraSystem.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Systems\ParticleSystem.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Systems\MeshSystem.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Systems\SoundSystem.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Systems\SystemManager.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\Transform.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\UI\CanvasComponent.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\ECS\UI\UIButtonComponent.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Engine.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\EngineContext.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\GameContext.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\IO\Button.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\IO\InputAxis.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\IO\InputSystem.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\IO\Keyboard.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\IO\Mouse.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Maths\Matrices.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Maths\Quaternion.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Maths\Vectors.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Particles\ParticleEmitter.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Particles\ParticleInstance.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Particles\ParticleParameters.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Physics\PhysicsActor.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Physics\PhysicsSimulation.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Physics\PhysicsSystem.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\DebugRenderPipeline.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\GraphicsSettings.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\MeshInstance.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\MeshLitShader.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\MeshPBRShader.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\MeshShader.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\MeshUnlitShader.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\OpaqueRenderPipeline.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\PostProcess.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\ParticleRenderPipeline.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\Primitives\FrameBuffer.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\Primitives\GLCubeMap.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\Primitives\GLPrimitive.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\Primitives\GLTexture.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\Primitives\GLTextureArray.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\Primitives\RenderBuffer.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\Primitives\ShaderProgram.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\Primitives\VertexArray.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\Primitives\VertexBuffer.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\RenderGPUWrapper.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\RenderObjects\Camera.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\RenderObjects\Light.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\RenderpassParameters.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\RenderSystem.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\RenderUtils.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\ShadowProcess.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\SkyboxRenderPipeline.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Renderer\TransparentRenderPipeline.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\Animation\Bone.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\loaders\ResourcesLoader.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\parsers\AssimpParser.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\ResourcesManager.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\Resource\Material.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\Resource\Mesh.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\Resource\Model.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\Resource\Prefab.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\Resource\Resource.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\Resource\Scene.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\Resource\Script.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\Resource\Shader.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\Resource\SkeletalMesh.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\Resource\Skybox.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\Resource\Sound.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\Resource\Terrain.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\Resource\Texture.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Resources\SceneManager.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Tools\Curves.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Tools\DrawDebug.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Tools\Flags.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Tools\ReflectedSTD.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Tools\RFKProperties.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Tools\RFKUtils.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Tools\StringHelper.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Types\Color.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Types\GUID.cpp" />
+    <ClCompile Include="..\..\..\Source\Engine\src\Types\Serializable.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dependencies\assimp\assimp.vcxproj">
+      <Project>{a94a8947-3108-4e88-996d-f6dc6935faa8}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dependencies\glad\glad.vcxproj">
+      <Project>{72b78e40-66cf-4b31-abe1-d418897e2eae}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dependencies\glfw3\glfw3.vcxproj">
+      <Project>{d18b7530-e2d1-45f4-a49f-d8d585cf4544}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dependencies\miniaudio\miniaudio.vcxproj">
+      <Project>{b7f84ef3-62e5-46e6-894c-6df6dd9f7fc0}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dependencies\Refureku\Refureku.vcxproj">
+      <Project>{0e26b274-58f8-4dbd-a9b3-a13a6e1bb8a9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dependencies\stb_image\stb_image.vcxproj">
+      <Project>{80027627-7cb9-49c6-b940-cf79a90daf59}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Source\Engine\include\Core\ResourcesTaskPool.inl" />
+    <None Include="..\..\..\Source\Engine\include\Core\TaskQueue.inl" />
+    <None Include="..\..\..\Source\Engine\include\Core\Time.inl" />
+    <None Include="..\..\..\Source\Engine\include\ECS\GameObject.inl" />
+    <None Include="..\..\..\Source\Engine\include\ECS\SceneObject.inl" />
+    <None Include="..\..\..\Source\Engine\include\ECS\Transform.inl" />
+    <None Include="..\..\..\Source\Engine\include\ECS\TransformData.inl" />
+    <None Include="..\..\..\Source\Engine\include\IO\Button.inl" />
+    <None Include="..\..\..\Source\Engine\include\IO\Keyboard.inl" />
+    <None Include="..\..\..\Source\Engine\include\IO\Mouse.inl" />
+    <None Include="..\..\..\Source\Engine\include\Maths\Matrix3.inl" />
+    <None Include="..\..\..\Source\Engine\include\Maths\Matrix4.inl" />
+    <None Include="..\..\..\Source\Engine\include\Maths\Quaternion.inl" />
+    <None Include="..\..\..\Source\Engine\include\Maths\Vector2.inl" />
+    <None Include="..\..\..\Source\Engine\include\Maths\Vector3.inl" />
+    <None Include="..\..\..\Source\Engine\include\Maths\Vector4.inl" />
+    <None Include="..\..\..\Source\Engine\include\Resources\ResourcesManager.inl" />
+    <None Include="..\..\..\Source\Engine\include\Resources\SceneManager.inl" />
+    <None Include="..\..\..\Source\Engine\include\Tools\Event.inl" />
+    <None Include="..\..\..\Source\Engine\include\Tools\Flags.inl" />
+    <None Include="..\..\..\Source\Engine\include\Tools\ReflectedSTD.inl" />
+    <None Include="..\..\..\Source\Engine\include\Tools\RFKUtils.inl" />
+    <None Include="..\..\..\Source\Engine\include\Tools\StringHelper.inl" />
+    <None Include="..\..\..\Source\Engine\include\Types\Color.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,148 @@
+{
+ "SceneGraph": {
+  "804e7920-cc55-45c1-a6c6-16392178c2c8": {
+   "Components": {
+    "36b50335-c40a-4da8-8ad0-7a669b3bc04b": {
+     "m_center": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "m_halfDimensions": [
+      0.5,
+      0.5,
+      0.5
+     ],
+     "m_isTrigger": false,
+     "m_material": {
+      "dynamicFriction": 0.019999999552965164,
+      "restitution": 0.019999999552965164,
+      "staticFriction": 0.019999999552965164
+     },
+     "m_name": "BoxCollider"
+    },
+    "e4219ae9-773d-43b0-9c80-0f3d2eb88415": {
+     "m_mesh": "79848de7-018a-48fd-b011-93a2d176cde5",
+     "m_name": "MeshComponent",
+     "materials": {
+      "v0": "b3838dcf-32e9-44f5-a3b9-68fa5e7abca0"
+     }
+    }
+   },
+   "Internal": {
+    "m_isActive": true,
+    "m_name": "Cube",
+    "m_parent": "0",
+    "transform": {
+     "isStatic": false,
+     "position": [
+      0.0,
+      -2.0,
+      0.0
+     ],
+     "rotation": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ]
+    }
+   }
+  },
+  "902b972d-cf2d-413f-9540-eb4279c325a5": {
+   "Components": {
+    "8795c0c7-b96c-4f48-9648-7f1fc152eb5c": {
+     "camera": {
+      "m_FOV": 60.0,
+      "m_far": 500.0,
+      "m_near": 0.10000000149011612
+     },
+     "m_name": "CameraComponent"
+    }
+   },
+   "Internal": {
+    "m_isActive": true,
+    "m_name": "Camera",
+    "m_parent": "0",
+    "transform": {
+     "isStatic": false,
+     "position": [
+      0.0,
+      5.0,
+      10.0
+     ],
+     "rotation": [
+      -0.13052619993686676,
+      0.0,
+      0.0,
+      0.9914448857307434
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ]
+    }
+   }
+  },
+  "c060a904-87bc-4ab3-b365-c0d03bf948f2": {
+   "Components": {
+    "dffc1b36-4956-4aed-8ebb-979e87230d58": {
+     "ambient": [
+      0.10000000149011612,
+      0.10000000149011612,
+      0.10000000149011612
+     ],
+     "castShadows": true,
+     "diffuse": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "enabled": true,
+     "innerCutoff": 0.9100000262260437,
+     "intensity": 1.0,
+     "m_name": "LightComponent",
+     "outerCutoff": 0.8199999928474426,
+     "radius": 5.0,
+     "specular": [
+      1.0,
+      1.0,
+      1.0
+     ],
+     "type": 0
+    }
+   },
+   "Internal": {
+    "m_isActive": true,
+    "m_name": "Light",
+    "m_parent": "0",
+    "transform": {
+     "isStatic": false,
+     "position": [
+      0.0,
+      5.0,
+      0.0
+     ],
+     "rotation": [
+      -0.5066577196121216,
+      -0.2275674045085907,
+      -0.04408639669418335,
+      0.8304020166397095
+     ],
+     "scale": [
+      1.0,
+      1.0,
+      1.0
+     ]
+    }
+   }
+  }
+ },
+ "Skybox": "d9538562-09b6-4cc7-a62d-3ba6ce367225"
+}

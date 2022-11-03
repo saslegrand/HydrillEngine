@@ -1,0 +1,287 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\GUI">
+      <UniqueIdentifier>{0f51a30a-ab3e-4c0c-b11a-0b7aa4333b1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\GUI">
+      <UniqueIdentifier>{3298007e-8892-42b1-b221-ed619bb3bae6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Common">
+      <UniqueIdentifier>{360c7ea9-c995-4317-aee5-31033b226edf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Common">
+      <UniqueIdentifier>{88076e87-974b-4ffe-b74c-048f247f2934}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Common\IO">
+      <UniqueIdentifier>{87a686bb-f8b4-4f92-8e2a-6954a81300be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Common\IO">
+      <UniqueIdentifier>{bfb48dbb-d138-4985-be63-824a9cfbce7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Tools">
+      <UniqueIdentifier>{c4f203d5-94c5-4624-97f9-f75f1aead557}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Tools">
+      <UniqueIdentifier>{136e98d0-e548-4b68-9b15-c7717fb122c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\EditorRenderer">
+      <UniqueIdentifier>{7d313b4f-6360-4c67-babb-30e1cea0f359}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\EditorRenderer">
+      <UniqueIdentifier>{d5dcf6fb-754e-473b-8366-0d2f783dc515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Windows">
+      <UniqueIdentifier>{0a3b8df8-870c-41be-bcd4-a34d6f50a865}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Windows">
+      <UniqueIdentifier>{431d0120-d8b3-4b11-9ce6-c7ddb00ea0df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Widgets">
+      <UniqueIdentifier>{cba0bb5d-7095-498c-b594-57235b8e1d49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Widgets">
+      <UniqueIdentifier>{ebeacb9c-850f-481e-b5db-7b178f945413}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Source\Common\src\io\Window.cpp">
+      <Filter>Fichiers sources\Common\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\GUI.cpp">
+      <Filter>Fichiers sources\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\GUITypes.cpp">
+      <Filter>Fichiers sources\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorApp.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorContext.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorImages.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorTheme.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Editor.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Tools\GameBuilder.cpp">
+      <Filter>Fichiers sources\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Common\src\DllWrapper.cpp">
+      <Filter>Fichiers sources\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorDragManager.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorSelectionManager.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Windows\EditorWindow.cpp">
+      <Filter>Fichiers sources\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\ContentBrowserWidget.cpp">
+      <Filter>Fichiers sources\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\EditorWidget.cpp">
+      <Filter>Fichiers sources\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\GameObjectInspectorWidget.cpp">
+      <Filter>Fichiers sources\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\RenderGameWidget.cpp">
+      <Filter>Fichiers sources\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\RenderSceneWidget.cpp">
+      <Filter>Fichiers sources\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\RenderWidget.cpp">
+      <Filter>Fichiers sources\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\ResourceInspectorWidget.cpp">
+      <Filter>Fichiers sources\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\SceneGraphWidget.cpp">
+      <Filter>Fichiers sources\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\ToolbarWidget.cpp">
+      <Filter>Fichiers sources\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\WidgetManager.cpp">
+      <Filter>Fichiers sources\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\ConsoleWidget.cpp">
+      <Filter>Fichiers sources\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Windows\BuildSettingsWindow.cpp">
+      <Filter>Fichiers sources\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Windows\PreferencesWindow.cpp">
+      <Filter>Fichiers sources\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Windows\ProjectSettingsWindow.cpp">
+      <Filter>Fichiers sources\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Windows\WindowManager.cpp">
+      <Filter>Fichiers sources\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorRenderer\RenderPicking.cpp">
+      <Filter>Fichiers sources\EditorRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorData.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Tools\FileDialogs.cpp">
+      <Filter>Fichiers sources\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Tools\ScriptBuilder.cpp">
+      <Filter>Fichiers sources\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\Tools\InspectorUtils.cpp">
+      <Filter>Fichiers sources\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorResourcePreview.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorRenderer\RenderGrid.cpp">
+      <Filter>Fichiers sources\EditorRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorRenderer\RenderPreview.cpp">
+      <Filter>Fichiers sources\EditorRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorRenderer\RenderGizmo.cpp">
+      <Filter>Fichiers sources\EditorRenderer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Source\Editor\include\Editor.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorApp.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorContext.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorImages.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorTheme.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\GUI.hpp">
+      <Filter>Fichiers d%27en-tête\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\GUITypes.hpp">
+      <Filter>Fichiers d%27en-tête\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Common\include\io\Window.hpp">
+      <Filter>Fichiers d%27en-tête\Common\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\PathConfig.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Tools\GameBuilder.hpp">
+      <Filter>Fichiers d%27en-tête\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Common\include\DllWrapper.hpp">
+      <Filter>Fichiers d%27en-tête\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorDragManager.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorSelectionManager.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Windows\EditorWindow.hpp">
+      <Filter>Fichiers d%27en-tête\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\ContentBrowserWidget.hpp">
+      <Filter>Fichiers d%27en-tête\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\EditorWidget.hpp">
+      <Filter>Fichiers d%27en-tête\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\GameObjectInspectorWidget.hpp">
+      <Filter>Fichiers d%27en-tête\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\RenderGameWidget.hpp">
+      <Filter>Fichiers d%27en-tête\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\RenderSceneWidget.hpp">
+      <Filter>Fichiers d%27en-tête\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\RenderWidget.hpp">
+      <Filter>Fichiers d%27en-tête\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\ResourceInspectorWidget.hpp">
+      <Filter>Fichiers d%27en-tête\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\SceneGraphWidget.hpp">
+      <Filter>Fichiers d%27en-tête\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\ToolbarWidget.hpp">
+      <Filter>Fichiers d%27en-tête\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\WidgetManager.hpp">
+      <Filter>Fichiers d%27en-tête\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\ConsoleWidget.hpp">
+      <Filter>Fichiers d%27en-tête\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Windows\ProjectSettingsWindow.hpp">
+      <Filter>Fichiers d%27en-tête\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Windows\WindowManager.hpp">
+      <Filter>Fichiers d%27en-tête\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Windows\BuildSettingsWindow.hpp">
+      <Filter>Fichiers d%27en-tête\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Windows\PreferencesWindow.hpp">
+      <Filter>Fichiers d%27en-tête\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorRenderer\RenderPicking.hpp">
+      <Filter>Fichiers d%27en-tête\EditorRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorData.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Tools\FileDialogs.hpp">
+      <Filter>Fichiers d%27en-tête\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Tools\ScriptBuilder.hpp">
+      <Filter>Fichiers d%27en-tête\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\Tools\InspectorUtils.hpp">
+      <Filter>Fichiers d%27en-tête\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorResourcePreview.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorRenderer\RenderPreview.hpp">
+      <Filter>Fichiers d%27en-tête\EditorRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorRenderer\RenderGrid.hpp">
+      <Filter>Fichiers d%27en-tête\EditorRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorRenderer\RenderGizmo.hpp">
+      <Filter>Fichiers d%27en-tête\EditorRenderer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

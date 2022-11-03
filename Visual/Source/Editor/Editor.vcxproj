@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Standalone|x64">
+      <Configuration>Standalone</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{b07a1d5e-e955-405b-9980-932667e4bb65}</ProjectGuid>
+    <RootNamespace>Editor</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Standalone|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Standalone|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <SourcePath>$(VC_SourcePath);$(SolutionDir)..Source\Editor\src</SourcePath>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(SolutionDir)..\Source\Editor\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)..\Binaries\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <SourcePath>$(VC_SourcePath);$(SolutionDir)..Source\Editor\src</SourcePath>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(SolutionDir)..\Source\Editor\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)..\Binaries\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Standalone|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <SourcePath>$(VC_SourcePath);$(SolutionDir)..Source\Editor\src</SourcePath>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IncludePath>$(SolutionDir)..\Source\Editor\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)..\Binaries\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Dependencies\include;$(SolutionDir)..\Source\Engine\include;$(SolutionDir)..\Source\Common\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Dependencies\include;$(SolutionDir)..\Source\Engine\include;$(SolutionDir)..\Source\Common\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Standalone|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>PUBLISHED;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\Dependencies\include;$(SolutionDir)..\Source\Engine\include;$(SolutionDir)..\Source\Common\include</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>
+      </DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Source\Common\src\DllWrapper.cpp" />
+    <ClCompile Include="..\..\..\Source\Common\src\io\Window.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Editor.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorApp.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorContext.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorDragManager.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorImages.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorData.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorRenderer\RenderGizmo.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorRenderer\RenderGrid.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorRenderer\RenderPreview.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorResourcePreview.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorSelectionManager.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorRenderer\RenderPicking.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\EditorTheme.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\GUI.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\GUITypes.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\main.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Tools\FileDialogs.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Tools\GameBuilder.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Tools\InspectorUtils.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Tools\ScriptBuilder.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\ConsoleWidget.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\ContentBrowserWidget.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\EditorWidget.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\GameObjectInspectorWidget.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\RenderGameWidget.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\RenderSceneWidget.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\RenderWidget.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\ResourceInspectorWidget.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\SceneGraphWidget.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\ToolbarWidget.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Widgets\WidgetManager.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Windows\BuildSettingsWindow.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Windows\EditorWindow.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Windows\PreferencesWindow.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Windows\ProjectSettingsWindow.cpp" />
+    <ClCompile Include="..\..\..\Source\Editor\src\Windows\WindowManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Dependencies\freetype\freetype.vcxproj">
+      <Project>{da0d460b-a2a1-475f-b076-16b01edcd52f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dependencies\glad\glad.vcxproj">
+      <Project>{72b78e40-66cf-4b31-abe1-d418897e2eae}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dependencies\glfw3\glfw3.vcxproj">
+      <Project>{d18b7530-e2d1-45f4-a49f-d8d585cf4544}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dependencies\imgui\imgui.vcxproj">
+      <Project>{f2fb4732-5e57-413f-9bfd-bbb6b23f0d59}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Dependencies\Refureku\Refureku.vcxproj">
+      <Project>{0e26b274-58f8-4dbd-a9b3-a13a6e1bb8a9}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Engine\Engine.vcxproj">
+      <Project>{b8cf6cc4-94d6-4347-8388-c6579f7ec88c}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Source\Common\include\DllWrapper.hpp" />
+    <ClInclude Include="..\..\..\Source\Common\include\io\Window.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Editor.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorApp.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorContext.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorDragManager.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorImages.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorData.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorRenderer\RenderGizmo.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorRenderer\RenderGrid.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorRenderer\RenderPicking.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorRenderer\RenderPreview.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorResourcePreview.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorSelectionManager.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\EditorTheme.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\GUI.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\GUITypes.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\PathConfig.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Tools\FileDialogs.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Tools\GameBuilder.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Tools\InspectorUtils.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Tools\ScriptBuilder.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\ConsoleWidget.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\ContentBrowserWidget.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\EditorWidget.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\GameObjectInspectorWidget.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\RenderGameWidget.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\RenderSceneWidget.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\RenderWidget.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\ResourceInspectorWidget.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\SceneGraphWidget.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\ToolbarWidget.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Widgets\WidgetManager.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Windows\BuildSettingsWindow.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Windows\EditorWindow.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Windows\PreferencesWindow.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Windows\ProjectSettingsWindow.hpp" />
+    <ClInclude Include="..\..\..\Source\Editor\include\Windows\WindowManager.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

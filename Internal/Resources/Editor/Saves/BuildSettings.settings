@@ -1,0 +1,8 @@
+{
+ "BuildData": {
+  "BuildName": "HydrillBuild",
+  "BuildPath": "",
+  "IconPath": "..\\..\\..\\Internal\\Resources\\Engine\\Icon.ico",
+  "StartScene": "0"
+ }
+}

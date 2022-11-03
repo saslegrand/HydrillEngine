@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Common">
+      <UniqueIdentifier>{25655364-f5e5-4716-b2af-7a1781059191}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Common\IO">
+      <UniqueIdentifier>{790ffdb4-dc5d-41ed-bfa5-a5bd40cf2e38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Common">
+      <UniqueIdentifier>{959dd5f7-1c83-46d9-b395-079bef09807d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Common\IO">
+      <UniqueIdentifier>{89bc9110-34ff-4602-8652-67561e122023}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Source\Game\include\GameApp.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Common\include\io\Window.hpp">
+      <Filter>Fichiers d%27en-tête\Common\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Common\include\DllWrapper.hpp">
+      <Filter>Fichiers d%27en-tête\Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Source\Game\src\GameApp.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Common\src\io\Window.cpp">
+      <Filter>Fichiers sources\Common\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Game\src\main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Common\src\DllWrapper.cpp">
+      <Filter>Fichiers sources\Common</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

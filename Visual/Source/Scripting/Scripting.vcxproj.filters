@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Collection">
+      <UniqueIdentifier>{f2819bbf-3029-48af-ba66-b6361efa34c7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Source\Scripting\include\Hydrill\Scripting.hpp">
+      <Filter>Fichiers d%27en-tête\Collection</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Scripting\include\Hydrill\EngineCollection.hpp">
+      <Filter>Fichiers d%27en-tête\Collection</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Scripting\include\Hydrill\MathsCollection.hpp">
+      <Filter>Fichiers d%27en-tête\Collection</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Scripting\include\Hydrill\ScriptingCollection.hpp">
+      <Filter>Fichiers d%27en-tête\Collection</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\Source\Scripting\include\MyScript.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Source\Scripting\src\MyScript.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
