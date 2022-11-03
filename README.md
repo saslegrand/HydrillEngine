@@ -88,7 +88,7 @@ You can download our game assets folder here : (https://drive.google.com/file/d/
 # Preview
 
 <div align="center">
-<img src="Internal/ReadMe/EditorScreenshot.png"/>
+<img src="Internal/ReadMe/EditorPreview.png"/>
 </div>
 
 <br/>
