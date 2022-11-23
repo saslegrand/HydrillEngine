@@ -93,7 +93,7 @@ void PhysicsSystem::StartPhysics()
 	if (running)
 		return;
 
-	Logger::Info("Create physics simulation");
+	//Logger::Info("Create physics simulation");
 
 	running = true;
 
