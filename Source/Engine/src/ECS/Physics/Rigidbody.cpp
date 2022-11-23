@@ -254,6 +254,17 @@ Vector3 Rigidbody::GetVelocity()
 	return { velocity.x, velocity.y, velocity.z };
 }
 
+void Rigidbody::SetVelocity(const Vector3& newVelocity)
+{
+	PxVec3 velocity = PxVec3(newVelocity.x, newVelocity.y, newVelocity.z);
+	m_RigidDynamic->setLinearVelocity(velocity);
+}
+
+void Rigidbody::SetMaxVelocity(float maxVelocityMag)
+{
+	m_RigidDynamic->setMaxLinearVelocity(maxVelocityMag);
+}
+
 Vector3 Rigidbody::GetAngularVelocity()
 {
 	PxVec3 velocity = m_RigidDynamic->getAngularVelocity();

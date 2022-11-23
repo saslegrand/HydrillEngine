@@ -640,6 +640,9 @@ void ShadowProcess::RenderDirectionalLightScene(const Matrix4 lightViewProj[Casc
 
     for (const MeshInstance* instance : renderSystem.GetAllMeshInstances())
     {
+        if (instance->isActive == false)
+            continue;
+
         m_meshCascadeShadowmapShader.SendUniform("uModel", instance->transform->GetWorldMatrix().elements);
 
         glDrawElementsBaseVertex(
@@ -662,6 +665,9 @@ void ShadowProcess::RenderDirectionalLightScene(const Matrix4 lightViewProj[Casc
 
     for (const SkeletalMeshInstance* instance : renderSystem.GetAllSkeletalMeshInstances())
     {
+        if (instance->isActive == false)
+            continue;
+
         const std::vector<Matrix4>& bonesTransform = instance->skeleton->boneTransforms;
         m_skeletalMeshCascadeShadowmapShader.SendUniform("uSkinningMatrices[0]", bonesTransform.data(), static_cast<int>(bonesTransform.size()));
         m_skeletalMeshCascadeShadowmapShader.SendUniform("uModel", instance->transform->GetWorldMatrix().elements);

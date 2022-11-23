@@ -231,6 +231,14 @@ public:
 	ENGINE_API Vector3 GetVelocity();
 
 	/**
+	@brief Get the current linear velocity vector of the Rigidbody
+	@return Vector3 : Linear Velocity
+	*/
+	ENGINE_API void SetVelocity(const Vector3& newVelocity);
+
+	ENGINE_API void SetMaxVelocity(float maxVelocityMag);
+
+	/**
 	@brief Get the current angular velocity vector of the Rigidbody
 	@return Vector3 : Angular Velocity (axis of rotation, magnitude is angle)
 	*/

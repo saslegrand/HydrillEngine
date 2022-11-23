@@ -96,6 +96,9 @@ void Keyboard::LoadKeys(nlohmann::json& jsonFile)
 {
 	nlohmann::json& jsonKeys = jsonFile["Keys"];
 
+	m_instance->namedAxesList.clear();
+	m_instance->namedButtonList.clear();
+
 	nlohmann::json& jsonButtons = jsonKeys["Buttons"];
 	for (nlohmann::json::iterator buttonIt = jsonButtons.begin(); buttonIt != jsonButtons.end(); ++buttonIt)
 	{
