@@ -234,7 +234,7 @@ bool GameBuilder::ExportBinaries(const std::filesystem::path& buildPath, const B
 
 		if (buildData.iconPath.empty())
 		{
-			newIconPath.append(R"(Internal\Resources\Engine\Images\HyDrill_Light_Ico.ico)");
+			newIconPath.append(R"(Internal\Resources\Engine\Images\Icon.ico)");
 		}
 		else
 		{

@@ -39,7 +39,7 @@ void GameApp::Initialize(const char* windowName)
 	m_engine = std::make_unique<Engine>(m_window.get());
 
 	// Load scripting dll
-	m_scriptingWrapper = std::make_unique<DllWrapper>(BINARIES_ROOT + std::string(R"(Scripting.dll)"));
+	m_scriptingWrapper = std::make_unique<DllWrapper>(std::string(R"(Scripting.dll)"));
 
 	//	Initializations
 	//	---------------

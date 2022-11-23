@@ -143,7 +143,7 @@ void Editor::Display()
         //  Top MenuBar of docking space
         DisplayMenuBar();
 
-        if (ImGui::Begin("DevWindow"));
+        if (ImGui::Begin("DevWindow"))
         {
             static Vector2 minMax = Vector2(FLT_MAX, -FLT_MAX);
 
