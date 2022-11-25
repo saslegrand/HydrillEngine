@@ -384,8 +384,6 @@ void AssimpParser::LoadMaterialTextures(Texture** texture, Model& model, aiMater
 {
 	ResourcesManager* RM = EngineContext::Instance().resourcesManager;
 
-	model;
-
 	aiString aiTexturePath;
 	if (mat->Get(AI_MATKEY_TEXTURE(type, 0), aiTexturePath) == AI_SUCCESS)
 	{
