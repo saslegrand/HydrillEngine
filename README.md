@@ -1,10 +1,7 @@
 <div align="center">
 <img src="Internal/ReadMe/HydrillLogo.png" width="600" height="600" />
-<br/>
-<a href="https://discord.gg/RREbg4WS"><img src="https://img.shields.io/discord/939949271258636328.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2" height=30></img></a>
 </div>
 
-<br/>
 <br/>
 
 # What is Hydrill ?
@@ -35,7 +32,6 @@ Hydrill is composed of 4 main modules :
     > *Moving with inputs, react to a collision or switch to another scene, this is where you will create your own behaviors for your game entities. You can also reflect values to tweak them directly in the editor.*
 
 <br/>
-<br/>
 
 # How to use ?
 
@@ -43,12 +39,11 @@ You want to give it a try? - Follow the instructions below :
 
 ### **Compiling from source**
 ---
-Go to our [**Github**](https://gitlabstudents.isartintra.com/projets/2021_gp_2025_engine_gp_2025_engine-hydrill) and clone the project on your Desktop. Once you are in the repository, extract the **Dependencies.zip** compressed file and run the **DevLaunch.bat** file to clean the old binaries and launch the **HydrillProject** and **HydrillScripting** visual studio solutions.
+Go to our [**Github**](https://github.com/saslegrand/HydrillEngine) and clone the project on your Desktop. Once you are in the repository, run the **LaunchBlank.bat** file to extract *Dependencies.zip* file, clean the old binaries and launch the **HydrillProject** and **HydrillScripting** visual studio solutions.
 
-If you are using ***Visual Studio 2022***, be sure to run with the ***MSVC v142 build tools*** and with the ***ATL for v142 build tools*** installed. *(check images below)*
+Given the **MSVC** version you are using, be sure to have the **ATL build tools installed** (relative to the current *MSVC* version you are using). You can find them in the *Individual components* section of the *VS Installer* application:
 
-<p align="center">
-<img src="Internal/ReadMe/MSVC142.png" width="450"/> <img src="Internal/ReadMe/ATL142.png"  width="450"/> 
+<p align="center"><img src="Internal/ReadMe/ATL142.png"  width="450"/> 
 </p>
 
 Once you are here, you first have to compile the **HydrillProject** solution *(Editor, Engine and Game projects)*. Then you can compile the **HydrillScripting** solution (Dependency with the *Engine*).
@@ -72,17 +67,12 @@ If you compile with the **Standalone** configuration, working directories are up
 
 ### **Release version**
 ---
-Go to our [**Gitlab Release**](https://gitlabstudents.isartintra.com/projets/2021_gp_2025_engine_gp_2025_engine-hydrill) (**TODO : Change with Github for free access. Gitlab need a student registration**) and download the latest release *.ZIP* file.
+Go to our [**Github Release**](https://github.com/saslegrand/HydrillEngine/releases/tag/published) and download the latest release *.ZIP* file.
 
 Here, you simply have to extract the folder and run the **Editor.exe** shortcut to run the editor and have fun.
 
-You can download our game assets folder here : (https://drive.google.com/file/d/1KI3pAWKekRPo-Kmha2kKtrJ9FJslMaLF/view?usp=sharing)
+You can also download our game assets folder here : (https://drive.google.com/file/d/1KI3pAWKekRPo-Kmha2kKtrJ9FJslMaLF/view?usp=sharing)
 
-<br/>
-
-# Features
-
-<br/>
 <br/>
 
 # Preview
